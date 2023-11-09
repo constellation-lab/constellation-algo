@@ -1,4 +1,4 @@
-import beaker
+import beaker as beaker
 import pyteal as pt
 from algokit_utils import DELETABLE_TEMPLATE_NAME, UPDATABLE_TEMPLATE_NAME
 
