@@ -1,0 +1,13 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.5.1
+_src_path: gh:algorandfoundation/algokit-fullstack-template
+author_email: conwuliri@gmail.com
+author_name: Emeka Onwuliri
+contract_name: hello_world
+deployment_language: python
+ide_vscode: true
+preset_name: starter
+project_name: constellation-demo
+use_python_black: true
+use_python_pytest: false
+
