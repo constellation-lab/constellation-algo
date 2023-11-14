@@ -1,0 +1,150 @@
+{
+    "hints": {
+        "create_option(uint64,uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMQpieXRlY2Jsb2NrIDB4NzQ2Zjc0NjE2YzVmNmY3MDc0Njk2ZjZlNzM1ZjZiNjU3OSAweDY3NmM2ZjYyNjE2YzVmNzM3NDYxNzQ2NTVmNmI2NTc5IDB4Njk2ZTY5NzQ2OTYxNmM2OTdhNjU2NCAweDM4MzEzODY0NjYzODM5MzkzMDM5MzgzNjY0MzIzODYxMzUzMDY1MzYzNzMxMzEzMTMwNjUzMjYyMzM2MzY2MzUzNTY0NjU2MzM2NjI2NDYyMzUzMzYyMzE2NjYyMzczNDMxNjUzODYzNjMzMDYyMzQzMDM0MzYzOTY1NjM2NDM3CnR4biBOdW1BcHBBcmdzCmludGNfMCAvLyAwCj09CmJueiBtYWluX2w0CnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4N2FlOTUzNmMgLy8gImNyZWF0ZV9vcHRpb24odWludDY0LHVpbnQ2NCl2b2lkIgo9PQpibnogbWFpbl9sMwplcnIKbWFpbl9sMzoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiBjcmVhdGVvcHRpb25jYXN0ZXJfMgppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sNDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQpibnogbWFpbl9sNgplcnIKbWFpbl9sNjoKdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KYXNzZXJ0CmNhbGxzdWIgY3JlYXRlXzAKaW50Y18xIC8vIDEKcmV0dXJuCgovLyBjcmVhdGUKY3JlYXRlXzA6CnByb3RvIDAgMApieXRlY18xIC8vICJnbG9iYWxfc3RhdGVfa2V5IgpieXRlY18yIC8vICJpbml0aWFsaXplZCIKYXBwX2dsb2JhbF9wdXQKYnl0ZWNfMCAvLyAidG90YWxfb3B0aW9uc19rZXkiCnB1c2hieXRlcyAweDMwIC8vICIwIgphcHBfZ2xvYmFsX3B1dApyZXRzdWIKCi8vIGNyZWF0ZV9vcHRpb24KY3JlYXRlb3B0aW9uXzE6CnByb3RvIDIgMApieXRlY18xIC8vICJnbG9iYWxfc3RhdGVfa2V5IgphcHBfZ2xvYmFsX2dldApieXRlY18yIC8vICJpbml0aWFsaXplZCIKPT0KYXNzZXJ0CmJ5dGVjXzAgLy8gInRvdGFsX29wdGlvbnNfa2V5IgpieXRlY18wIC8vICJ0b3RhbF9vcHRpb25zX2tleSIKYXBwX2dsb2JhbF9nZXQKYnRvaQppbnRjXzEgLy8gMQorCml0b2IKYXBwX2dsb2JhbF9wdXQKcHVzaGJ5dGVzIDB4NmY3MDc0Njk2ZjZlNWY2YzY5NzM3NDVmNmI2NTc5IC8vICJvcHRpb25fbGlzdF9rZXkiCnB1c2hieXRlcyAweDM1NjIzODM2MzUzMjM1NjUzMDMzNjIzMzMwMzczNDM3MzI2MzM3Mzg2NTMxNjM2NDM5MzIzNDMxMzkzNjM3NjIzMzY2MzIzMzM2NjEzNzM5MzIzOTM4MzQzMTM5MzE2MjY2MzIzMjMyMzQ2MzYyMzUzODM2NjU2NDYzNjIzNDM4IC8vIDB4MzU2MjM4MzYzNTMyMzU2NTMwMzM2MjMzMzAzNzM0MzczMjYzMzczODY1MzE2MzY0MzkzMjM0MzEzOTM2Mzc2MjMzNjYzMjMzMzY2MTM3MzkzMjM5MzgzNDMxMzkzMTYyNjYzMjMyMzIzNDYzNjIzNTM4MzY2NTY0NjM2MjM0MzgKYXBwX2dsb2JhbF9wdXQKcHVzaGJ5dGVzIDB4NmY3NzZlNjU3MjVmNmM2OTczNzQ1ZjZiNjU3OSAvLyAib3duZXJfbGlzdF9rZXkiCmJ5dGVjXzMgLy8gMHgzODMxMzg2NDY2MzgzOTM5MzAzOTM4MzY2NDMyMzg2MTM1MzA2NTM2MzczMTMxMzEzMDY1MzI2MjMzNjM2NjM1MzU2NDY1NjMzNjYyNjQ2MjM1MzM2MjMxNjY2MjM3MzQzMTY1Mzg2MzYzMzA2MjM0MzAzNDM2Mzk2NTYzNjQzNwphcHBfZ2xvYmFsX3B1dApwdXNoYnl0ZXMgMHg2MzcyNjU2MTc0NmY3MjVmNmM2OTczNzQ1ZjZiNjU3OSAvLyAiY3JlYXRvcl9saXN0X2tleSIKYnl0ZWNfMyAvLyAweDM4MzEzODY0NjYzODM5MzkzMDM5MzgzNjY0MzIzODYxMzUzMDY1MzYzNzMxMzEzMTMwNjUzMjYyMzM2MzY2MzUzNTY0NjU2MzM2NjI2NDYyMzUzMzYyMzE2NjYyMzczNDMxNjUzODYzNjMzMDYyMzQzMDM0MzYzOTY1NjM2NDM3CmFwcF9nbG9iYWxfcHV0CnJldHN1YgoKLy8gY3JlYXRlX29wdGlvbl9jYXN0ZXIKY3JlYXRlb3B0aW9uY2FzdGVyXzI6CnByb3RvIDAgMAppbnRjXzAgLy8gMApkdXAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpidG9pCmZyYW1lX2J1cnkgMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAyCmJ0b2kKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAwCmZyYW1lX2RpZyAxCmNhbGxzdWIgY3JlYXRlb3B0aW9uXzEKcmV0c3Vi",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 11,
+            "num_uints": 6
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 1
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "collateral_price": {
+                    "type": "uint64",
+                    "key": "collateral_price",
+                    "descr": ""
+                },
+                "creator_list_data": {
+                    "type": "bytes",
+                    "key": "creator_list_data",
+                    "descr": ""
+                },
+                "creator_list_key": {
+                    "type": "bytes",
+                    "key": "creator_list_key",
+                    "descr": ""
+                },
+                "expires_timestamp": {
+                    "type": "uint64",
+                    "key": "expires_timestamp",
+                    "descr": ""
+                },
+                "for_sale": {
+                    "type": "uint64",
+                    "key": "for_sale",
+                    "descr": ""
+                },
+                "global_state_key": {
+                    "type": "bytes",
+                    "key": "global_state_key",
+                    "descr": ""
+                },
+                "market_list_data": {
+                    "type": "bytes",
+                    "key": "market_list_data",
+                    "descr": ""
+                },
+                "market_list_key": {
+                    "type": "bytes",
+                    "key": "market_list_key",
+                    "descr": ""
+                },
+                "new_owner": {
+                    "type": "bytes",
+                    "key": "new_owner",
+                    "descr": ""
+                },
+                "new_price": {
+                    "type": "uint64",
+                    "key": "new_price",
+                    "descr": ""
+                },
+                "option_list_data": {
+                    "type": "bytes",
+                    "key": "option_list_data",
+                    "descr": ""
+                },
+                "option_list_key": {
+                    "type": "bytes",
+                    "key": "option_list_key",
+                    "descr": ""
+                },
+                "options_id": {
+                    "type": "uint64",
+                    "key": "options_id",
+                    "descr": ""
+                },
+                "options_quantity": {
+                    "type": "uint64",
+                    "key": "options_quantity",
+                    "descr": ""
+                },
+                "owner_list_data": {
+                    "type": "bytes",
+                    "key": "owner_list_data",
+                    "descr": ""
+                },
+                "owner_list_key": {
+                    "type": "bytes",
+                    "key": "owner_list_key",
+                    "descr": ""
+                },
+                "total_options_key": {
+                    "type": "bytes",
+                    "key": "total_options_key",
+                    "descr": ""
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {
+                "claimable_amount": {
+                    "type": "uint64",
+                    "key": "claimable_amount",
+                    "descr": ""
+                }
+            },
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "ConstellationDerivative",
+        "methods": [
+            {
+                "name": "create_option",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "counter_offer"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "expires_timestamp"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {
+        "no_op": "CREATE"
+    }
+}

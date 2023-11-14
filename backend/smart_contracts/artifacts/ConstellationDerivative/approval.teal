@@ -1,0 +1,92 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x746f74616c5f6f7074696f6e735f6b6579 0x676c6f62616c5f73746174655f6b6579 0x696e697469616c697a6564 0x38313864663839393039383664323861353065363731313130653262336366353564656336626462353362316662373431653863633062343034363965636437
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l4
+txna ApplicationArgs 0
+pushbytes 0x7ae9536c // "create_option(uint64,uint64)void"
+==
+bnz main_l3
+err
+main_l3:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub createoptioncaster_2
+intc_1 // 1
+return
+main_l4:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l6
+err
+main_l6:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+callsub create_0
+intc_1 // 1
+return
+
+// create
+create_0:
+proto 0 0
+bytec_1 // "global_state_key"
+bytec_2 // "initialized"
+app_global_put
+bytec_0 // "total_options_key"
+pushbytes 0x30 // "0"
+app_global_put
+retsub
+
+// create_option
+createoption_1:
+proto 2 0
+bytec_1 // "global_state_key"
+app_global_get
+bytec_2 // "initialized"
+==
+assert
+bytec_0 // "total_options_key"
+bytec_0 // "total_options_key"
+app_global_get
+btoi
+intc_1 // 1
++
+itob
+app_global_put
+pushbytes 0x6f7074696f6e5f6c6973745f6b6579 // "option_list_key"
+pushbytes 0x35623836353235653033623330373437326337386531636439323431393637623366323336613739323938343139316266323232346362353836656463623438 // 0x35623836353235653033623330373437326337386531636439323431393637623366323336613739323938343139316266323232346362353836656463623438
+app_global_put
+pushbytes 0x6f776e65725f6c6973745f6b6579 // "owner_list_key"
+bytec_3 // 0x38313864663839393039383664323861353065363731313130653262336366353564656336626462353362316662373431653863633062343034363965636437
+app_global_put
+pushbytes 0x63726561746f725f6c6973745f6b6579 // "creator_list_key"
+bytec_3 // 0x38313864663839393039383664323861353065363731313130653262336366353564656336626462353362316662373431653863633062343034363965636437
+app_global_put
+retsub
+
+// create_option_caster
+createoptioncaster_2:
+proto 0 0
+intc_0 // 0
+dup
+txna ApplicationArgs 1
+btoi
+frame_bury 0
+txna ApplicationArgs 2
+btoi
+frame_bury 1
+frame_dig 0
+frame_dig 1
+callsub createoption_1
+retsub
