@@ -8,6 +8,7 @@ from smart_contracts.config import contracts
 from smart_contracts.helpers.build import build
 from smart_contracts.helpers.deploy import deploy
 
+
 logging.basicConfig(
     level=logging.DEBUG, format="%(asctime)s %(levelname)-10s: %(message)s"
 )

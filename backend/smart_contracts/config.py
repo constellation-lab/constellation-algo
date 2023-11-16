@@ -8,7 +8,6 @@ from algosdk.v2client.algod import AlgodClient
 from algosdk.v2client.indexer import IndexerClient
 from beaker import Application
 
-
 @dataclasses.dataclass
 class SmartContract:
     app: Application
@@ -18,7 +17,7 @@ class SmartContract:
 
 
 def import_contract(folder: Path) -> Application:
-    """Imports the contract from a folder if it exists."""
+    #Imports the contract from a folder if it exists
     try:
         contract_module = importlib.import_module(
             f"{folder.parent.name}.{folder.name}.contract"
@@ -34,7 +33,7 @@ def import_deploy_if_exists(
     Callable[[AlgodClient, IndexerClient, ApplicationSpecification, Account], None]
     | None
 ):
-    """Imports the deploy function from a folder if it exists."""
+    #Imports the deploy function from a folder if it exists.
     try:
         deploy_module = importlib.import_module(
             f"{folder.parent.name}.{folder.name}.deploy_config"
@@ -45,7 +44,7 @@ def import_deploy_if_exists(
 
 
 def has_contract_file(directory: Path) -> bool:
-    """Checks whether the directory contains contract.py file."""
+   # Checks whether the directory contains contract.py file.
     return (directory / "contract.py").exists()
 
 
@@ -62,3 +61,4 @@ contracts = [
 ## in the smart_contracts directory. Optionally it will also grab the deploy function from deploy_config.py if it exists.
 
 # contracts = []
+

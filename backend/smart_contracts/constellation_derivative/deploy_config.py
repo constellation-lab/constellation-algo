@@ -35,6 +35,9 @@ def deploy(
     counter_offer = 1000  # Replace with your desired amount (as uint64)
     expires = 1677647999  # Replace with your desired timestamp (as uint64)
 
+    new_owner = "Address"
+    price = 2000
+
   # Create an option
     create_option_txn = app_client.create_option(
     counter_offer=counter_offer,
@@ -43,32 +46,32 @@ def deploy(
 )
     logger.info(f"Option creation transaction ID: {create_option_txn}")
 
-""""
+
     # Retrieve the option ID from the transaction response (assuming your create_option method returns the option ID)
-    option_id = app_client.get_option_id_from_transaction_response(create_option_txn)
+    option_id = app_client.get_option_id()
     
     # Transfer ownership internally
-    transfer_txn = _internal_transfer(option_id, new_owner)
+    transfer_txn = app_client._internal_transfer(option_id, new_owner)
     logger.info(f"Ownership transferred. Transaction ID: {transfer_txn}")
 
     # List the option for sale internally
-    list_for_sale_txn = _internal_list_for_sale(option_id, price)
+    list_for_sale_txn = app_client._internal_list_for_sale(option_id, price)
     logger.info(f"Option listed for sale. Transaction ID: {list_for_sale_txn}")
 
     # Buy the option internally
-    buy_txn = _internal_buy(option_id)
+    buy_txn = app_client._internal_buy(option_id)
     logger.info(f"Option bought. Transaction ID: {buy_txn}")
 
     # Execute the option internally
-    execute_option_txn = _internal_execute_option(option_id)
+    execute_option_txn = app_client._internal_execute_option(option_id)
     logger.info(f"Option executed. Transaction ID: {execute_option_txn}")
 
     # Claim expired option internally
-    claim_expired_txn = _internal_claim_expired(option_id)
+    claim_expired_txn = app_client._internal_claim_expired(option_id)
     logger.info(f"Option claimed as expired. Transaction ID: {claim_expired_txn}")
 
     # Close out the option internally
-    close_out_txn = _internal_close_out(option_id)
+    close_out_txn = app_client._internal_close_out(option_id)
     logger.info(f"Option closed out. Transaction ID: {close_out_txn}")
-"""    
+
 logger.info("Deployment and contract interactions completed.")
